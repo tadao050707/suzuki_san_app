@@ -42,4 +42,4 @@ $ rails s
 ![katekate_app drawio](https://user-images.githubusercontent.com/104758322/182528754-6f8c0f25-6665-4731-9bb0-12e813db7f18.png)
 
 ## 画面遷移図
-![スクリーンショット 2022-08-03 14 03 31](https://user-images.githubusercontent.com/104758322/182528787-1d496c60-96d7-4749-a683-e6f0df15796f.png)
+<img width="952" alt="スクリーンショット 2022-08-03 16 37 11" src="https://user-images.githubusercontent.com/104758322/182551583-54996e41-6818-4972-aac3-f01f4bb97079.png">

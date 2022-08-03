@@ -1,24 +1,45 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## バージョン
+* Ruby 3.0.1
+* Ruby on Rails 6.0.3
 
-Things you may want to cover:
+## 就業Termの技術
+* AWS EC2
+* devise
+* Ajaxを使ったコメント機能
+* フォロー・フォロワー機能
+* メール通知機能
+* お気に入り機能
 
-* Ruby version
+## カリキュラム外の技術
+* PV数カウントgem(impressionist)
+* ウィザード形式の入力フォームgem(wicked)
+* CSSフレームワーク(Bulma)
 
-* System dependencies
+## 準備
+```
+$ git clone git@github.com:shota4214/Graduation_exam_katekate.git
+$ cd Graduation_exam_katekate
+$ bundle install
+$ rails db:create
+$ rails db:migrate
+$ rails db:seed
+```
 
-* Configuration
+## アプリケーション実行
+```
+$ rails s
+```
 
-* Database creation
+## カタログ設計
+[カタログ設計　スプレッドシート](https://docs.google.com/spreadsheets/d/1VZ91-x6q8wQ8oJU2w7w8Fg1JAt1p2uCHBd0Nv9BZqHQ/edit?usp=sharing)
+## テーブル定義書
+[テーブル定義書　スプレッドシート](https://docs.google.com/spreadsheets/d/1VZ91-x6q8wQ8oJU2w7w8Fg1JAt1p2uCHBd0Nv9BZqHQ/edit?usp=sharing)
+## ワイヤーフレーム
+![スクリーンショット 2022-08-03 14 01 27](https://user-images.githubusercontent.com/104758322/182528677-951654ce-aa75-4e8e-bd5d-b440b47343ae.png)
+## ER図
+![katekate_app drawio](https://user-images.githubusercontent.com/104758322/182528754-6f8c0f25-6665-4731-9bb0-12e813db7f18.png)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 画面遷移図
+![スクリーンショット 2022-08-03 14 03 31](https://user-images.githubusercontent.com/104758322/182528787-1d496c60-96d7-4749-a683-e6f0df15796f.png)

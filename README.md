@@ -37,10 +37,8 @@ $ rails s
 ## テーブル定義書
 [テーブル定義書　スプレッドシート](https://docs.google.com/spreadsheets/d/1VZ91-x6q8wQ8oJU2w7w8Fg1JAt1p2uCHBd0Nv9BZqHQ/edit?usp=sharing)
 ## ワイヤーフレーム
-![スクリーンショット 2022-08-03 14 01 27](https://user-images.githubusercontent.com/104758322/182528677-951654ce-aa75-4e8e-bd5d-b440b47343ae.png)
+![スクリーンショット 2022-08-04 18 48 12](https://user-images.githubusercontent.com/104758322/182818257-39466d8f-1aa9-43c1-8ed5-ca4ea92b439b.png)
 ## ER図
-![katekate_app-Page-1 drawio](https://user-images.githubusercontent.com/104758322/182795165-dd038dd2-5583-4099-9a46-0df7d614c7c6.png)
-
-
+![katekate_app-Page-1 drawio](https://user-images.githubusercontent.com/104758322/182818179-3c3112c6-55c7-4d6c-bc3d-9b95eb6c3309.png)
 ## 画面遷移図
-<img width="952" alt="スクリーンショット 2022-08-03 16 37 11" src="https://user-images.githubusercontent.com/104758322/182551583-54996e41-6818-4972-aac3-f01f4bb97079.png">
+<img width="907" alt="スクリーンショット 2022-08-04 18 48 41" src="https://user-images.githubusercontent.com/104758322/182818481-c084565c-083b-4bce-a4cb-d519b8c47081.png">

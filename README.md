@@ -39,7 +39,8 @@ $ rails s
 ## ワイヤーフレーム
 ![スクリーンショット 2022-08-03 14 01 27](https://user-images.githubusercontent.com/104758322/182528677-951654ce-aa75-4e8e-bd5d-b440b47343ae.png)
 ## ER図
-![katekate_app-Page-1 drawio](https://user-images.githubusercontent.com/104758322/182772981-2aa73886-6bdb-42b3-aa75-d5b1529ae9d6.png)
+![katekate_app-Page-1 drawio](https://user-images.githubusercontent.com/104758322/182795165-dd038dd2-5583-4099-9a46-0df7d614c7c6.png)
+
 
 ## 画面遷移図
 <img width="952" alt="スクリーンショット 2022-08-03 16 37 11" src="https://user-images.githubusercontent.com/104758322/182551583-54996e41-6818-4972-aac3-f01f4bb97079.png">

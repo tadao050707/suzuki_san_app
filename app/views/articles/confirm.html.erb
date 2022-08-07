@@ -1,0 +1,13 @@
+<h3>以下の内容で、投稿します</h3>
+
+<%= form_with(model: @article, local: true, url: articles_path ) do |f| %>
+  <%= f.hidden_field :type %>
+  <%= f.hidden_field :title %>
+  <%= f.hidden_field :content %>
+
+  <p>記事種類：<%= @article.type %></p>
+  <p>タイトル:<%= @article.title %></p>
+  <p>本文:<%= @article.content %></p>
+  <%= f.submit  "登録する" %>
+  <%= f.submit  "戻る", name: 'back' %>
+<% end %>

@@ -1,0 +1,31 @@
+ja:
+  activerecord:
+    models:
+      article: 記事
+      user: ユーザー
+    attributes:
+      article:
+        title: タイトル
+        content: 内容
+        image: 画像
+        type: 種類
+        draft: 下書き
+      user:
+        name: 名前
+        email: メールアドレス
+        encrypted__password: 現在のパスワード
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        remember_me: ログインを記憶
+        prefectures: 都道府県
+        image: 画像
+        sex: 性別
+        birthday: 生年月日
+        introduction: 自己紹介
+        admin: 管理者
+        twitter_url: Twitter
+        instagram_url: Instagram
+        tiktok_url: Tiktok
+        facebook_url: Facebook
+        youtube_url: youtube_url
+        website_url: Website

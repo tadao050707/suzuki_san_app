@@ -18,5 +18,23 @@
 <p>YouTube<%= @user.youtube_url %></p>
 <p>Website<%= @user.website_url %></p>
 
-
 <%= link_to "プロフィール編集", edit_user_registration_path(@user) %>
+
+<table>
+  <tr>
+    <th>記事種類</th>
+    <th>タイトル</th>
+    <th>内容</th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr>
+    <td><%= article.type %></td>
+    <td><%= article.title %></td>
+    <td><%= article.content %></td>
+    <td><%= link_to '詳細', article_path(article.id) %></td>
+    <td><%= link_to "編集", edit_article_path(article.id) %></td>
+    <td><%= link_to '削除', article_path(article.id), method: :delete, data: { confirm: "本当に削除しても良いですか？" } %></td>
+  </tr>
+<% end %>
+</table>

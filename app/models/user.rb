@@ -2,9 +2,8 @@ class User < ApplicationRecord
   mount_uploader :image, ImageUploader
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-        :recoverable, :rememberable, :validatable
-
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
+  has_many :articles
   enum sex: {unanswered: 0, male: 1, female: 2}
   enum prefectures: {
     "---":0,

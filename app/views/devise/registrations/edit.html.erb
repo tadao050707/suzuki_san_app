@@ -4,8 +4,33 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :image %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+    <div class="field">
+    <%= f.label :birthday %><br />
+    <%= f.date_select :birthday, use_month_numbers: true, start_year: 1930, end_year: (Time.now.year), default: Date.new(2000, 1 , 1), autofocus: true, autocomplete: "birthday" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sex %><br />
+    <%= f.select :sex, [["未選択", "unanswered"], ["男性", "male"], ["女性", "female"]], autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :prefectures %><br />
+    <%= f.select :prefectures, User.prefectures.keys, {}, autofocus: true %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -13,7 +38,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :password %> <i>(変更しない場合は未入力で良いです)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
@@ -27,17 +52,57 @@
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :current_password %> <i>(変更する場合は現在のパスワードを入力してください)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
+  <div class="field">
+    <%= f.label :introduction %><br />
+    <%= f.text_area :introduction, size: "50x5" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Twitter %><br />
+    <%= f.text_field :twitter_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Instagram %><br />
+    <%= f.text_field :instagram_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Tiktok %><br />
+    <%= f.text_field :tiktok_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Facebook %><br />
+    <%= f.text_field :facebook_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :YouTube %><br />
+    <%= f.text_field :youtube_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Website %><br />
+    <%= f.text_field :website_url %>
+  </div>
+
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "更新" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+
+
+
+<h3>アカウント削除</h3>
+
+<p>本当に削除しますか? <%= button_to "削除", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>

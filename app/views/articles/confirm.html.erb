@@ -2,12 +2,15 @@
 
 <%= form_with(model: @article, local: true, url: articles_path ) do |f| %>
   <%= f.hidden_field :type %>
+  <%= f.hidden_field :image %>
+  <%= f.hidden_field :image_cache %>
   <%= f.hidden_field :title %>
   <%= f.hidden_field :content %>
 
   <p>記事種類：<%= @article.type %></p>
+  <p>写真：<%= image_tag(@article.image.url) if @article.image && @article.image.url %></p>
   <p>タイトル:<%= @article.title %></p>
   <p>本文:<%= @article.content %></p>
   <%= f.submit  "登録する" %>
-  <%= f.submit  "戻る", name: 'back' %>
+  <%= f.submit "戻る", name: "back" %>
 <% end %>

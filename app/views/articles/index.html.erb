@@ -3,13 +3,15 @@
 <table>
   <tr>
     <th>記事種類</th>
+    <th>投稿者</th>
     <th>タイトル</th>
     <th>内容</th>
   </tr>
 
 <% @articles.each do |article| %>
   <tr>
-    <td><%= article.type %>
+    <td><%= article.type %></td>
+    <td><%= article.user.name %></td>
     <td><%= article.title %></td>
     <td><%= article.content %></td>
     <td><%= link_to '詳細', article_path(article.id) %></td>

@@ -13,12 +13,12 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-    <div class="field">
+  <div class="field">
     <%= f.label :birthday %><br />
     <%= f.date_select :birthday, use_month_numbers: true, start_year: 1930, end_year: (Time.now.year), default: Date.new(2000, 1 , 1), autofocus: true, autocomplete: "birthday" %>
   </div>
 
-    <div class="field">
+  <div class="field">
     <%= f.label :sex %><br />
     <%= f.select :sex, [["未選択", "unanswered"], ["男性", "male"], ["女性", "female"]], autofocus: true %>
   </div>

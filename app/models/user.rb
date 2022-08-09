@@ -2,9 +2,8 @@ class User < ApplicationRecord
   mount_uploader :image, ImageUploader
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-        :recoverable, :rememberable, :validatable
-
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
+  has_many :articles
   enum sex: {unanswered: 0, male: 1, female: 2}
   enum prefectures: {
     "---":0,
@@ -18,4 +17,17 @@ class User < ApplicationRecord
     福岡県:40,佐賀県:41,長崎県:42,熊本県:43,大分県:44,宮崎県:45,鹿児島県:46,
     沖縄県:47
   }
+
+  def age
+    user_birthday = self.birthday
+    today = Date.today.strftime("%Y%m%d").to_i
+    birthday = user_birthday.strftime("%Y%m%d").to_i
+    user_age = (today - birthday) / 10000
+    if user_age < 10
+      10
+    else
+      user_age.floor(-1)
+    end
+  end
+
 end

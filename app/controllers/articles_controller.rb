@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
     if params[:back]
       render :new
     else
@@ -43,7 +43,7 @@ class ArticlesController < ApplicationController
   end
 
   def confirm
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
     render :new if @article.invalid?
   end
 

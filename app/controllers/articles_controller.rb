@@ -26,6 +26,7 @@ class ArticlesController < ApplicationController
   def show
     if user_signed_in?
       @favorite = current_user.favorites.find_by(article_id: @article.id)
+      @like = current_user.likes.find_by(article_id: @article.id)
     end
   end
 

@@ -24,6 +24,9 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    if user_signed_in?
+      @favorite = current_user.favorites.find_by(article_id: @article.id)
+    end
   end
 
   def edit

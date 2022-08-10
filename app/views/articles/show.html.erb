@@ -1,5 +1,9 @@
 <h1>記事詳細画面</h1>
 
+<div class="like-link" id="like-link-<%= @article.id %>">
+  <%= render partial: 'likes/like', locals: {article: @article} %>
+</div>
+
 <% if user_signed_in? %>
   <% unless @article.user_id == current_user.id %>
     <% if @favorite.present? %>

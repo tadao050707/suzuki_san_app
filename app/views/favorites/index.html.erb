@@ -1,0 +1,22 @@
+<h1>お気に入り記事・質問一覧</h1>
+
+<table>
+  <tr>
+    <th>記事種類</th>
+    <th>投稿者</th>
+    <th>写真</th>
+    <th>タイトル</th>
+    <th>内容</th>
+  </tr>
+
+<% @favorites.each do |favorite| %>
+  <tr>
+    <td><%= favorite.type %></td>
+    <td><%= favorite.user.name %></td>
+    <td><%= image_tag favorite.image.url %>
+    <td><%= favorite.title %></td>
+    <td><%= favorite.content %></td>
+    <td><%= link_to '詳細', article_path(favorite.id) %></td>
+  </tr>
+<% end %>
+</table>

@@ -6,6 +6,7 @@ class CreateArticles < ActiveRecord::Migration[6.0]
       t.text "image"
       t.integer "type", default: 0, null: false
       t.boolean "draft", default: false
+      t.timestamps
     end
   end
 end
